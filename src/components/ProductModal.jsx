@@ -8,7 +8,7 @@ const ProductModal = ({ product, onClose, handleDecrease, handleIncrease, quanti
   const dispatch = useDispatch();
 
   if (!product) return null;
-  // console.log('ProductModal Rendered with product:', product, 'Quantity:', quantity);
+  
   const handleAddToCart = () => {
     dispatch(addToCart(product));
   };
