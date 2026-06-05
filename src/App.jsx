@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import SkeletonLoader from './components/common/SkeletonLoader';
@@ -20,10 +20,21 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 
 function App() {
+  const location = useLocation();
+  const [isGlobalLoading, setIsGlobalLoading] = useState(false);
+
+  useEffect(() => {
+    setIsGlobalLoading(true);
+    const timer = setTimeout(() => {
+      setIsGlobalLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
   return (
     <>
       <Header />
-      <main>
+      <main className={isGlobalLoading ? 'global-skeleton-active' : ''}>
         <Suspense fallback={<SkeletonLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -47,4 +58,3 @@ function App() {
 }
 
 export default App;
-

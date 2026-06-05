@@ -299,3 +299,31 @@ body {
   width: 20px;
   text-align: center;
 }
+/* Global Skeleton Loading applied to specific content tags inside .global-skeleton-active */
+.global-skeleton-active p,
+.global-skeleton-active h1,
+.global-skeleton-active h2,
+.global-skeleton-active h3,
+.global-skeleton-active h4,
+.global-skeleton-active h5,
+.global-skeleton-active h6,
+.global-skeleton-active span,
+.global-skeleton-active a,
+.global-skeleton-active img,
+.global-skeleton-active button,
+.global-skeleton-active i,
+.global-skeleton-active svg,
+.global-skeleton-active .card-body {
+  animation: skeleton-loading 1s linear infinite alternate !important;
+  color: transparent !important;
+  background-color: hsl(200, 20%, 80%) !important;
+  border-color: transparent !important;
+  pointer-events: none !important;
+  border-radius: 4px;
+}
+
+.global-skeleton-active img {
+  opacity: 0 !important; /* Hide image source while skeleton background is showing */
+}
+
+/* Exempt specific icons if they disappear entirely in a bad way, though transparent works */
