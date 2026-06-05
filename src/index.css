@@ -1,3 +1,301 @@
+:root {
+  --bs-primary: #3577f0; /* E-trade specific blue */
+  --bs-danger: #DB4444; /* Same red for alerts/badges */
+}
+
+/* Base Body Styling */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Custom Overrides */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+.bg-danger {
+  background-color: #DB4444 !important;
+}
+.text-danger {
+  color: var(--bs-danger) !important;
+}
+.btn-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
+}
+.btn-danger:hover {
+  background-color: #c93535 !important;
+  border-color: #c93535 !important;
+}
+
+/* Product Card Styling */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.product-card:hover .add-to-cart-btn {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+.product-card .add-to-cart-btn {
+  transform: translateY(10px);
+}
+.product-card img {
+  transition: transform 0.3s ease;
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Category Card Styling */
+.category-card {
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  background-color: var(--bs-primary);
+  color: white;
+  border-color: var(--bs-primary) !important;
+}
+.category-card:hover h6, .category-card:hover i {
+  color: white !important;
+}
+
+/* Glow effects and shadows */
+.blur-glow {
+  box-shadow: 0 0 100px 50px rgba(255,255,255,0.2);
+}
+.drop-shadow {
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+}
+.hover-bg-danger {
+  cursor: pointer;
+}
+
+/* Custom Swiper Pagination */
+.swiper-custom-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.swiper-custom-bullet-active {
+  background-color: transparent !important;
+  border: 2px solid var(--bs-danger) !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+
+/* Modal styling overrides */
+.modal-content {
+  border-radius: 12px;
+}
+
+/* Shop Page Styles */
+@media (min-width: 992px) {
+  .product-info-sticky {
+    position: sticky;
+    top: 100px; /* Offset for fixed header */
+    align-self: flex-start;
+  }
+}
+
+/* Hide scrollbar for images if needed */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* About Page Custom CSS */
+.about-info-box {
+  transition: all 0.3s ease;
+  border: 1px solid transparent; /* default transparent border */
+}
+
+.about-info-box:hover {
+  border: 1px solid blue !important;
+}
+
+.btn-get-in-touch {
+  transition: all 0.3s ease;
+  border: 1px solid #ccc; /* or whichever default border is needed */
+  background-color: transparent;
+  color: #000;
+}
+
+.btn-get-in-touch:hover {
+  background-color: red !important;
+  color: white !important;
+  border-color: red !important;
+}
+
+/* Header Dropdown Hover CSS */
+.dropdown-hover:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; 
+}
+.dropdown-hover > .dropdown-toggle:active {
+  pointer-events: none;
+}
+
+/* Auth Pages Custom CSS */
+.auth-left-bg {
+  background-color: #fce7e7;
+  min-height: 100vh;
+}
+
+.auth-input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.auth-input-group input {
+  width: 100%;
+  padding: 16px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+}
+
+.auth-input-group input:focus {
+  border-color: var(--bs-primary);
+}
+
+.auth-input-group label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: white;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Skeleton Loading CSS */
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.skeleton-text {
+  width: 100%;
+  height: .8rem;
+  margin-bottom: .5rem;
+}
+
+.skeleton-text:last-child {
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.skeleton-title {
+  width: 50%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 250px;
+}
+
+/* Contact Page CSS */
+.contact-input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.contact-input-group input,
+.contact-input-group textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.contact-input-group input:focus,
+.contact-input-group textarea:focus {
+  border-color: var(--bs-primary);
+}
+
+.contact-input-group label {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background: white;
+  padding: 0 6px;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.map-overlay.active {
+  opacity: 1;
+}
+
+/* Account Page CSS */
+.account-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #6c757d;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.account-nav-link:hover,
+.account-nav-link.active {
+  background-color: #f0f5fa;
+  color: var(--bs-primary);
+}
+
+.account-nav-link i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
 }
