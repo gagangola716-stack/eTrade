@@ -208,10 +208,10 @@ const Account = () => {
                 <i className="fa-regular fa-user"></i> Account Details
               </button>
               <button 
-                className="account-nav-link mt-2 border-top pt-3 rounded-0"
+                className="account-nav-link mt-2 border-top pt-3 rounded-0 text-danger"
                 onClick={handleLogout}
               >
-                <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                <i className="fa-solid fa-arrow-right-from-bracket text-danger"></i> Logout
               </button>
             </div>
           </div>

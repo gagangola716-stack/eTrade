@@ -92,9 +92,25 @@ const Header = () => {
                     </span>
                   )}
                 </button>
-                <Link to="#" className="text-dark fs-5 ms-2">
-                  <i className="fa-regular fa-user"></i>
-                </Link>
+                <div className="dropdown dropdown-click">
+                  <Link to="#" className="text-dark fs-5 ms-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i className="fa-regular fa-user"></i>
+                  </Link>
+                  <div className="dropdown-menu dropdown-menu-start p-3 shadow-sm border-0" style={{ width: '250px' }}>
+                    <h6 className="dropdown-header px-0 text-dark fw-bold fs-6">Quicklinks</h6>
+                    <Link className="dropdown-item px-0 py-2" to="/account">My Account</Link>
+                    <Link className="dropdown-item px-0 py-2" to="#">Initiate Return</Link>
+                    <Link className="dropdown-item px-0 py-2" to="#">Support</Link>
+                    <Link className="dropdown-item px-0 py-2" to="#">Language</Link>
+                    <div className="dropdown-divider my-2"></div>
+                    <Link className="btn btn-primary w-100 mb-2 py-2" to="/signin">Login</Link>
+                    <div className="text-center small mb-2">
+                      No account yet? <Link to="/signup" className="register-link fw-bold">Register here</Link>
+                    </div>
+                    <div className="dropdown-divider my-2"></div>
+                    <Link className="dropdown-item px-0 py-2 text-danger fw-medium" to="/signin">Log out</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -211,7 +227,7 @@ const Header = () => {
                 <span>Total</span>
                 <span>${totalAmount.toFixed(2)}</span>
               </div>
-              <button className="btn btn-danger w-100 py-3 fw-bold">Checkout</button>
+              <Link to="/checkout" className="btn btn-danger w-100 py-3 fw-bold">Checkout</Link>
             </div>
           )}
         </div>

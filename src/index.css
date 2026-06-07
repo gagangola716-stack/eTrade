@@ -144,6 +144,17 @@ body {
   pointer-events: none;
 }
 
+/* Header Profile Dropdown Specific CSS */
+.register-link {
+  color: var(--bs-primary) !important;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  color: var(--bs-danger) !important;
+}
+
 /* Auth Pages Custom CSS */
 .auth-left-bg {
   background-color: #fce7e7;
@@ -298,6 +309,189 @@ body {
   font-size: 1.1rem;
   width: 20px;
   text-align: center;
+}
+
+/* Checkout Page CSS */
+.checkout-notice {
+  background-color: #f6f6f6;
+  padding: 15px 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.checkout-link-hover {
+  cursor: pointer;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.checkout-link-hover:hover {
+  color: var(--bs-primary) !important;
+}
+
+.checkout-dropdown {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 6px;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.checkout-right-bg {
+  background-color: #f9f3f0;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.checkout-input-group {
+  position: relative;
+}
+
+.checkout-label-float {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background-color: white;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #6c757d;
+  z-index: 10;
+}
+
+.checkout-form-input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s;
+  font-size: 15px;
+}
+
+.checkout-form-input:focus {
+  border-color: var(--bs-primary);
+}
+
+.required-star {
+  color: var(--bs-danger);
+}
+
+.payment-method-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.payment-methods .form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/* Privacy Policy Page CSS */
+.policy-header-bg {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.policy-breadcrumb {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.policy-breadcrumb a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+.policy-breadcrumb span {
+  margin: 0 8px;
+}
+
+.policy-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.policy-content-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.policy-published-date {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+.policy-section-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.policy-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.policy-text a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.policy-text a:hover {
+  text-decoration: underline;
+}
+
+.policy-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.policy-list li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-bottom: 10px;
+  position: relative;
+  list-style-type: none;
+}
+
+.policy-list li::before {
+  content: "•";
+  color: #6c757d;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+.policy-list li a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+.policy-list li a:hover {
+  text-decoration: underline;
 }
 /* Global Skeleton Loading applied to specific content tags inside .global-skeleton-active */
 .global-skeleton-active p,

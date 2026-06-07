@@ -27,7 +27,7 @@ function App() {
     setIsGlobalLoading(true);
     const timer = setTimeout(() => {
       setIsGlobalLoading(false);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
