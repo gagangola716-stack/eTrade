@@ -9,7 +9,7 @@ const ComingSoon = () => {
     seconds: 0
   });
 
-  useEffect(() => {gi
+  useEffect(() => {
     // Set a date 30 days from now for the countdown
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 30);
@@ -23,7 +23,7 @@ const ComingSoon = () => {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
           minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)  
         });
       } else {
         clearInterval(interval);
